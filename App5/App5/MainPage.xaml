@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App5"
+             x:Class="App5.MainPage">
+
+    <!--A StackLayout allows us to add child elements to your view in a one-dimensional line 
+    which can be oriented either vertically or horizontally.-->
+    <StackLayout Padding="40">
+        <Label Text="Click button to fire command!" />
+
+        <!--Normally events are handled by event handlers in the code behind.
+        However in the MVVM design pattern we substitute event handlers with Commands.
+        Command Bindings allow us to directly call methods that are defined in a ViewModel .
+        In order to implement commanding, a ViewModel needs to implement the ICommand interface. -->
+        <Button Text="Click Me" Command="{Binding ButtonClickedCommand}" />
+
+    </StackLayout>
+
+</ContentPage>
